@@ -9,11 +9,9 @@ func del(first int, second int) (float64, bool) {
 	if second == 0 {
 		return 0, false
 	}
-	ch := first / second
-	if ch == int(ch) {
-		return float64(ch), true
-	}
-	return float64(math.Round(float64(ch*10^2)) / (100.0)), true
+	ch := float64(first) / float64(second)
+	fmt.Println(ch)
+	return math.Round(ch*(100)) / 100, true
 }
 
 func main() {
